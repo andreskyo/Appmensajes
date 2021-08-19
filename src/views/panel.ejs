@@ -1,0 +1,73 @@
+<%-include('./partials/head')%>
+
+    <style>
+        body{
+           color:white;
+           background:black; 
+        }
+
+        .output {
+            background: rgb(8, 8, 8);
+            width: 60%;
+            border: 1px solid rgb(233, 233, 233);
+            border-radius: 3px;
+            font-size: 20px;
+            padding: 5px;
+            margin: auto;
+        }
+
+        .inputs {
+            margin: auto;
+            text-align: center;
+            margin-bottom: 5px;
+            color:white;
+        }
+
+        .mensaje {
+            width: 600px;
+            height: 100px;
+            border-radius: 5px;
+            background: rgb(34, 33, 33);
+            color:white;
+
+        }
+
+        button {
+            width: 200px;
+            height: 30px;
+            background: none;
+            font-weight: bold;
+            color:white;
+        }
+        #historial{
+            display:none;
+        }
+      
+     
+    </style>
+
+    <div class="usuario" name="name" id=user>
+        <h3>
+            <%-user.name%>
+        </h3>
+    </div>
+
+    <div class="inputs">
+
+        <input type="text" name="mensajes" id="mensaje" class="mensaje" placeholder="mensaje">
+        <button type="submit" id="send">enviar</button>
+        <button id="abrir"  class="historial">historial</button>
+    </div>
+
+    <div id="output" class="output">
+        
+    </div>
+
+    
+
+       <div class="historial" id="historial">
+
+       </div>
+
+
+<%-include('./partials/footer')%>
